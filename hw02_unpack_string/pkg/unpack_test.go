@@ -43,3 +43,21 @@ func TestUnpackInvalidString(t *testing.T) {
 		})
 	}
 }
+
+func Test_isInvalid(t *testing.T) {
+	tests := []struct {
+		input string
+		want  bool
+	}{
+		{input: "axfe4d2f4", want: false},
+		{input: "1asdf", want: true},
+		{input: "asda10asd", want: true},
+	}
+	for _, tt := range tests {
+		t.Run(tt.input, func(t *testing.T) {
+			if got := isInvalid(tt.input); got != tt.want {
+				t.Errorf("isInvalid() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
