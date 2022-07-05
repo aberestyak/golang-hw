@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/aberestyak/golang-hw/hw02_unpack_string/pkg"
+	hw02unpackstring "github.com/aberestyak/golang-hw/hw02_unpack_string/pkg"
 )
 
 func main() {
