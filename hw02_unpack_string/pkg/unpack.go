@@ -2,7 +2,6 @@ package hw02unpackstring
 
 import (
 	"errors"
-
 	"regexp"
 	"strconv"
 	"strings"
@@ -53,6 +52,5 @@ func Unpack(input string) (string, error) {
 	if isInvalid(input) {
 		return "", ErrInvalidString
 	}
-	runes := []rune(input)
-	return processInputRunes(runes), nil
+	return processInputRunes([]rune(input)), nil
 }
